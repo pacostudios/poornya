@@ -152,7 +152,7 @@ export default function Navbar() {
           </div>
 
           {/* RIGHT SLIDER */}
-          <div className="flex gap-4 justify-center md:justify-end">
+          <div className="grid grid-cols-1 mx-auto sm:grid-cols-2 gap-4 sm:gap-16 ">
             {[team[current], team[current + 1]].map(
               (item, idx) =>
                 item && (

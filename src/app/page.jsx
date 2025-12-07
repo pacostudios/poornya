@@ -32,7 +32,7 @@ export default function Home() {
     pt-24 
     bg-cover bg-bottom bg-no-repeat 
     flex items-center
-    rounded-t-lg
+    rounded-lg
     min-h-[600px] 
     sm:min-h-[700px]
     md:min-h-[85vh]
@@ -56,7 +56,9 @@ export default function Home() {
             </div>
 
             <div className="border-2 border-[#666666] w-fit flex items-center gap-2 backdrop-blur-3xl  bg-[#FFFFFF66] px-5 py-2 rounded-full">
-              <span className="text-white text-sm font-semibold">Healthy Body</span>
+              <span className="text-white text-sm font-semibold">
+                Healthy Body
+              </span>
             </div>
           </div>
           {/* --- Healthy Mind Tag --- */}
@@ -70,7 +72,9 @@ export default function Home() {
 "
           >
             <div className="w-fit flex items-center border-2 border-[#666666] gap-2 backdrop-blur-lg bg-[#FFFFFF66] bg-cover bg-center px-5 py-2 rounded-full shadow-md">
-              <span className="text-white text-sm font-semibold">Healthy Mind</span>
+              <span className="text-white text-sm font-semibold">
+                Healthy Mind
+              </span>
             </div>
             <div className="w-9 h-9 rounded-full overflow-hidden border-[3px] border-[#FFFFFF66] bg-[#00000099] flex gap-2">
               <div className="w-[25px] h-[25px] rounded-full bg-white m-auto"></div>
@@ -91,9 +95,7 @@ export default function Home() {
             </p>
           </div>
           {/* --- Left Content Box --- */}
-          <div
-            className="absolute bottom-0 -left-1 sm:left-0 flex flex-col gap-10 z-10 "
-          >
+          <div className="absolute bottom-0 -left-1 sm:left-0 flex flex-col gap-10 z-10 ">
             <p
               className="text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[70px] 
       font-medium text-black animate-in fade-in duration-700 delay-300 
@@ -439,7 +441,7 @@ w-48 md:w-56
                 </p>
               </div>
               <img
-                src="/User1.jpg"
+                src="/user1.jpg"
                 alt="Client"
                 className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full border-2 border-white flex-shrink-0"
               />
@@ -448,7 +450,7 @@ w-48 md:w-56
             {/* 2 - Top Right */}
             <div className="absolute flex items-center gap-1 sm:gap-2 top-4 sm:top-6 md:top-10 right-0 sm:right-4 md:right-8 lg:right-12 animate-in fade-in slide-in-from-right duration-700 delay-200">
               <img
-                src="/User1.jpg"
+                src="/user1.jpg"
                 alt="Client"
                 className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full border-2 border-white flex-shrink-0"
               />
@@ -467,7 +469,7 @@ w-48 md:w-56
                 </p>
               </div>
               <img
-                src="/User1.jpg"
+                src="/user1.jpg"
                 alt="Client"
                 className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full border-2 border-white flex-shrink-0"
               />
@@ -476,7 +478,7 @@ w-48 md:w-56
             {/* 4 - Middle Right */}
             <div className="absolute flex items-center gap-1 sm:gap-2 top-1/2 -translate-y-1/2 right-0 sm:right-2 md:right-4 lg:right-8 animate-in fade-in slide-in-from-right duration-700 delay-600">
               <img
-                src="/User1.jpg"
+                src="/user1.jpg"
                 alt="Client"
                 className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full border-2 border-white flex-shrink-0"
               />
@@ -490,7 +492,7 @@ w-48 md:w-56
             {/* 5 - Bottom Center */}
             <div className="absolute flex items-center gap-1 sm:gap-2 bottom-4 sm:bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 animate-in fade-in slide-in-from-bottom duration-700 delay-800">
               <img
-                src="/User1.jpg"
+                src="/user1.jpg"
                 alt="Client"
                 className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full border-2 border-white flex-shrink-0"
               />
