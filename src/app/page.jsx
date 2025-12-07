@@ -25,7 +25,7 @@ export default function Home() {
     },
   ];
   return (
-    <div className="text-black p-3 flex flex-col gap-16 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0]">
+    <div className="text-black p-3 flex flex-col gap-3 sm:gap-16 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0]">
       <section
         className="
     relative overflow-hidden 
@@ -92,8 +92,7 @@ export default function Home() {
           </div>
           {/* --- Left Content Box --- */}
           <div
-            className="absolute bottom-0 -left-1 sm:left-0 flex flex-col gap-10 z-10 
-    w-[180px] sm:w-[350px] md:w-[450px] lg:w-[600px] xl:w-[700px]"
+            className="absolute bottom-0 -left-1 sm:left-0 flex flex-col gap-10 z-10 "
           >
             <p
               className="text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[70px] 
@@ -120,7 +119,7 @@ export default function Home() {
                 Where Positive
               </span>
               <br />
-              <span className="bg-white rounded-tr-[18px] p-2 relative  after:content-[''] after:absolute after:bottom-1 after:-right-4 after:w-4 after:h-4 after:bg-[radial-gradient(circle_at_top_left,transparent_70%,white_70%)] after:rotate-90">
+              <span className="bg-white rounded-tr-[18px] p-2 relative  after:content-[''] after:absolute after:bottom-0 after:sm:bottom-1 after:-right-4 after:w-4 after:h-4 after:bg-[radial-gradient(circle_at_top_left,transparent_70%,white_70%)] after:rotate-90">
                 Change Feels Safe
               </span>
             </p>
