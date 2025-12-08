@@ -34,10 +34,10 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-[#98C44B] pt-12 sm:pt-16 md:pt-4 sm:pb-8 px-4 sm:px-6 lg:px-8 rounded-lg bg-[url('/footerLine.png')] bg-no-repeat bg-[length:100%_auto]
+    <footer className="relative bg-[#98C44B] pt-4 sm:pt-16 md:pt-4 sm:pb-8 px-4 sm:px-6 lg:px-8 rounded-lg bg-[url('/footerLine.png')] bg-no-repeat bg-[length:100%_auto]
 bg-bottom-left bg-overflow-hidden">
       {/* CTA SECTION */}
-      <section className="pb-8 sm:pb-10 md:pb-12 max-w-8xl mx-auto">
+      <section className="pb-3 sm:pb-10 md:pb-12 max-w-8xl mx-auto">
         <div className="relative bg-white border-2 sm:border-4 border-lime-500 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 overflow-hidden">
           {/* Floating Icons - Hidden on mobile/tablet */}
           <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden xl:block w-[180px] h-[180px]">
@@ -168,7 +168,7 @@ bg-bottom-left bg-overflow-hidden">
       </p>
 
       {/* Main Content - Responsive layout */}
-      <div className="relative z-10 max-w-8xl mx-auto flex flex-col sm:flex-row justify-between gap-8 sm:gap-6 md:gap-8 mb-32 sm:mb-36 md:mb-40 pt-6 sm:pt-0">
+      <div className="relative z-10 max-w-8xl mx-auto flex flex-col sm:flex-row justify-between gap-2 sm:gap-6 md:gap-8 mb-20 sm:mb-36 md:mb-40 pt-0 sm:pt-0">
         {/* Left */}
         <div className="w-full sm:w-auto">
           <div className="w-24 h-20 sm:w-28 sm:h-24 md:w-32 md:h-28 bg-white rounded-lg flex items-center justify-center mb-4 mx-auto sm:mx-0">
@@ -203,7 +203,7 @@ bg-bottom-left bg-overflow-hidden">
         </div>
 
         {/* Right Navigation */}
-        <div className="flex flex-col items-center sm:items-end gap-4">
+        <div className="flex flex-col items-center sm:items-end gap-0 sm:gap-4">
           <nav className="flex flex-col items-center sm:items-end gap-2 sm:gap-3 text-center sm:text-right">
             {["Home", "About Us", "Services", "Referral", "Contact Us"].map(
               (item) => (

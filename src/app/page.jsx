@@ -17,7 +17,7 @@ export default function Home() {
     },
     {
       title: "Children And Families",
-      image: "/children.png",
+      image: "/Children.png",
     },
     {
       title: "Mental Health Support",
@@ -95,7 +95,7 @@ export default function Home() {
             </p>
           </div>
           {/* --- Left Content Box --- */}
-          <div className="absolute bottom-0 -left-1 sm:left-0 flex flex-col gap-10 z-10 ">
+          <div className="absolute bottom-0 -left-1 sm:left-0 z-10 ">
             <p
               className="text-xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[70px] 
       font-medium text-black animate-in fade-in duration-700 delay-300 
@@ -103,7 +103,7 @@ export default function Home() {
             >
               <span
                 className="
-    bg-white rounded-tr-[18px] p-2 relative inline-block pr-4
+    bg-white rounded-tr-lg sm:rounded-tr-[18px] p-2 relative inline-block pr-4
 
     /* RIGHT BOTTOM CURVE */
     after:content-[''] after:absolute after:bottom-1 after:sm:bottom-2.5 after:-right-4
@@ -121,7 +121,7 @@ export default function Home() {
                 Where Positive
               </span>
               <br />
-              <span className="bg-white rounded-tr-[18px] p-2 relative  after:content-[''] after:absolute after:bottom-0 after:sm:bottom-1 after:-right-4 after:w-4 after:h-4 after:bg-[radial-gradient(circle_at_top_left,transparent_70%,white_70%)] after:rotate-90">
+              <span className="bg-white rounded-tr-lg sm:rounded-tr-[18px] p-2 relative  after:content-[''] after:absolute after:bottom-0 after:sm:bottom-1 after:-right-4 after:w-4 after:h-4 after:bg-[radial-gradient(circle_at_top_left,transparent_70%,white_70%)] after:rotate-90">
                 Change Feels Safe
               </span>
             </p>
@@ -155,9 +155,9 @@ md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 du
           </div>
         </div>
       </section>
-      <section className="py-16 px-4 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0]">
+      <section className="py-4 sm:py-16 px-2 sm:px-4 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0]">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-8 items-start">
             {/* Left Side - Image Card */}
             <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[320px] sm:h-[400px] md:h-[500px] group">
               <img
@@ -191,7 +191,7 @@ md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 du
             </div>
 
             {/* Right Side - Content */}
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-3 sm:gap-12">
               {/* Heading */}
               <div>
                 <h2 className="text-5xl font-bold text-gray-800 mb-4">
@@ -219,7 +219,7 @@ md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 du
               </div>
 
               {/* Service Categories Grid */}
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-3">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-3">
                 {aboutus.map((item, index) => (
                   <div
                     key={index}
@@ -256,7 +256,7 @@ md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 du
       </section>
       <div>
         <MarqueeOnPath />
-        <section className="py-16 px-4 bg-[#98C44B] rounded-lg overflow-hidden">
+        <section className="py-4 sm:py-16 px-4 bg-[#98C44B] rounded-lg overflow-hidden">
           <div className="relative w-full max-w-md mx-auto sm:max-w-lg md:max-w-xl">
             {/* Heading */}
             <div className="text-center mb-4">
@@ -270,7 +270,7 @@ md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 du
             </div>
 
             {/* Main Content Grid */}
-            <div className="relative mt-12 ">
+            <div className="relative mt-2 sm:mt-12 ">
               {/* Center Image */}
               <div className="flex justify-center items-center">
                 <div className="relative w-full max-w-md">
@@ -282,7 +282,7 @@ md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 du
 
                   {/* Card 1 - Top Left */}
                   <div
-                    className="absolute top-16 -md:-left-48 → sm:-left-20 md:-left-32 lg:-left-48 w-48 md:w-56 
+                    className="absolute top-16 left-1/2 -md:-left-48 → sm:-left-20 md:-left-32 lg:-left-48 w-48 md:w-56 
     rounded-xl p-4 shadow-lg 
     bg-white/60 backdrop-blur-md scale-75 sm:scale-90 md:scale-100"
                   >
@@ -338,7 +338,7 @@ w-48 md:w-56
                   {/* Card 3 - Bottom Right */}
 
                   <div
-                    className="absolute bottom-36  --md:-right-48 → sm:-right-20 md:-right-32 lg:-right-48
+                    className="absolute bottom-36 right-0 --md:-right-48 → sm:-right-20 md:-right-32 lg:-right-48
  w-48 md:w-56  
     rounded-xl p-4 shadow-lg 
     bg-white/60 backdrop-blur-md scale-75 sm:scale-90 md:scale-100"
@@ -396,7 +396,7 @@ w-48 md:w-56
             </div>
 
             {/* Explore More Button */}
-            <div className="flex justify-center mt-16">
+            <div className="flex justify-center mt-4 sm:mt-16">
               <button className="bg-emerald-900 hover:bg-emerald-800 text-white px-8 py-3 rounded-full font-medium shadow-lg transition-all duration-300 hover:scale-105">
                 Explore More
               </button>
@@ -404,7 +404,7 @@ w-48 md:w-56
           </div>
         </section>
       </div>
-      <section className="py-20 px-4 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0] relative overflow-hidden">
+      <section className="py-4 sm:py-20 px-4 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0] relative overflow-hidden">
         <div className="mx-auto max-w-6xl relative">
           {/* Concentric Circles Background - positioned to center content */}
           <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
@@ -462,7 +462,7 @@ w-48 md:w-56
             </div>
 
             {/* 3 - Middle Left */}
-            <div className="absolute flex items-center gap-1 sm:gap-2 top-1/2 -translate-y-1/2 left-0 sm:left-2 md:left-4 lg:left-8 animate-in fade-in slide-in-from-left duration-700 delay-400">
+            <div className="absolute flex items-center gap-1 sm:gap-2 top-4/5 sm:top-1/2 -translate-y-1/2 left-0 sm:left-2 md:left-4 lg:left-8 animate-in fade-in slide-in-from-left duration-700 delay-400">
               <div className="bg-emerald-200 rounded-full px-2 py-1.5 sm:px-3 sm:py-2 shadow-lg max-w-[110px] sm:max-w-[140px] md:max-w-[260px]">
                 <p className="text-[9px] sm:text-[10px] md:text-xs font-medium text-gray-900 leading-snug">
                   Poornaya has helped protect me
@@ -476,7 +476,7 @@ w-48 md:w-56
             </div>
 
             {/* 4 - Middle Right */}
-            <div className="absolute flex items-center gap-1 sm:gap-2 top-1/2 -translate-y-1/2 right-0 sm:right-2 md:right-4 lg:right-8 animate-in fade-in slide-in-from-right duration-700 delay-600">
+            <div className="absolute flex items-center gap-1 sm:gap-2 top-9/12 sm:top-1/2 -translate-y-1/2 right-0 sm:right-2 md:right-4 lg:right-8 animate-in fade-in slide-in-from-right duration-700 delay-600">
               <img
                 src="/user1.jpg"
                 alt="Client"

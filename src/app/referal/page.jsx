@@ -49,7 +49,7 @@ export default function referal() {
   ];
 
   return (
-    <div className="p-2 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0]">
+    <div className="flex flex-col gap-4 sm:gap-6 p-2 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0]">
       {/* HEADER */}
       <div className="bg-[#98C44B] w-full py-20 sm:py-28 md:py-36 rounded-lg bg-[url('/referalLine.png')] bg-no-repeat bg-bottom left bg-cover">
         <p className="text-center font-semibold text-4xl sm:text-5xl md:text-6xl text-[#003A11]">
@@ -58,14 +58,14 @@ export default function referal() {
       </div>
 
       {/* STEPS SECTION */}
-      <section className="px-4 sm:px-8 md:px-12 mb-16">
-        <div className="py-12 text-center">
+      <section className="px-4 sm:px-8 md:px-12">
+        <div className="py-4 sm:py-12 text-center">
           <p className="font-medium text-2xl sm:text-3xl">
             Simple, secure, and streamlined for your convenience
           </p>
         </div>
 
-        <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
           {steps.map((item, index) => (
             <div
               key={index}
@@ -94,13 +94,13 @@ export default function referal() {
       </section>
 
       {/* WHO CAN REFER + ELIGIBILITY SECTION */}
-      <section className="bg-[#7CCA984D] px-4 sm:px-10 md:px-20 py-16 flex items-center rounded-lg justify-center mb-16 bg-[url('/canReferLine.png')] bg-cover bg-left">
+      <section className="bg-[#7CCA984D] px-4 sm:px-10 md:px-20 py-4  sm:py-16 flex items-center rounded-lg justify-center  bg-[url('/canReferLine.png')] bg-cover bg-left">
         <div className="w-full relative">
           {/* Decorative Circles */}
           <div className="absolute top-0 left-1/4 w-32 h-32 sm:w-48 sm:h-48 bg-yellow-100 rounded-full opacity-60 -z-10"></div>
           <div className="absolute bottom-0 right-1/4 w-40 h-40 sm:w-64 sm:h-64 bg-green-200 rounded-full opacity-40 -z-10"></div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
             {/* Who Can Refer */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg relative overflow-hidden">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3">
@@ -148,7 +148,7 @@ export default function referal() {
       </section>
 
       {/* FORM SECTION */}
-      <section className="mb-16 px-4 sm:px-10 md:px-20">
+      <section className=" px-4 sm:px-10 md:px-20">
         <div className="py-8 text-center">
           <p className="font-medium text-2xl sm:text-3xl">Submit a Referral</p>
           <p>Complete the form below to refer a participant</p>

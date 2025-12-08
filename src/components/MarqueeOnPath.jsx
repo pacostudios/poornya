@@ -35,7 +35,11 @@ export default function MarqueeOnPath({
   }, [text]);
 
   return (
-    <section className="relative py-20 bg-stone-100 overflow-hidden bg-[url('/FLOWER.png')] bg-no-repeat bg-center">
+    <section
+  className="relative py-20  overflow-hidden
+  bg-[url('/FLOWER.png')] bg-no-repeat bg-center
+  bg-contain "
+>
       <div className=" w-full">
         <svg viewBox="40 0 800 200" className="w-full h-auto block">
           <defs>

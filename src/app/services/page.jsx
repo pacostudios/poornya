@@ -6,8 +6,12 @@ import {
   CheckCircle2,
   MoveRight,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Services() {
+
+    const router = useRouter();
+  
   const services = [
     {
       title: "Functional Behaviour Assessments",
@@ -35,7 +39,7 @@ export default function Services() {
       description:
         "Targeted Support For Participants Within Forensic, Neurodivergent, Or Dual-Diagnosis Contexts",
       image:
-        "./Autism.png",
+        "./autism.png",
     },
     {
       title: "Mental Health & Self-Advocacy",
@@ -56,7 +60,7 @@ export default function Services() {
       description:
         "Continuous Progress Evaluations To Ensure Strategies Stay Relevant And Effective",
       image:
-        "./ongoingReview.png",
+        "./ongoingreview.png",
     },
     {
       title: "Reducing Restrictive Practices",
@@ -74,7 +78,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="p-2 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0]">
+    <div className="flex flex-col gap-3 sm:gap-16 p-2 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0]">
       
       {/* HERO SECTION */}
       <div className="bg-[#98C44B] w-full py-24 md:py-36 rounded-lg bg-[url('/serviceLine.png')] bg-no-repeat bg-bottom-right bg-contain">
@@ -84,7 +88,7 @@ export default function Services() {
       </div>
 
       {/* INTRO SECTION */}
-      <section className="w-full px-4 sm:px-6 md:px-12 my-12 md:my-16">
+      <section className="w-full px-4 sm:px-6 md:px-12 ">
         <div className="text-center max-w-4xl mx-auto">
           <p className="font-medium text-xl md:text-3xl leading-relaxed">
             We Deliver Positive Behaviour Support For Children, Young People,
@@ -93,9 +97,9 @@ export default function Services() {
         </div>
 
         {/* SERVICES GRID */}
-        <div className="mt-12">
+        <div className="mt-4 sm:mt-12">
           <div className="max-w-7xl mx-auto">
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6">
               {services.map((service, index) => (
                 <div
                   key={index}
@@ -123,7 +127,11 @@ export default function Services() {
                       {service.description}
                     </p>
 
-                    <button className="bg-[#003A11] w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center group-hover:scale-110 transition-all">
+                    <button
+                    onClick={()=>{
+router.push('/contact');
+                    }}
+                     className="bg-[#003A11] cursor-pointer w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center group-hover:scale-110 transition-all">
                       <ArrowUpRight className="w-4 md:w-5 h-4 md:h-5 text-white" />
                     </button>
                   </div>
@@ -135,7 +143,7 @@ export default function Services() {
       </section>
 
       {/* ELIGIBILITY SECTION */}
-      <section className="bg-[#7CCA984D] px-4 sm:px-6 md:px-12 py-16 rounded-lg relative overflow-hidden bg-[url('/eligibilityLine.png')] bg-cover bg-center">
+      <section className="bg-[#7CCA984D] px-4 sm:px-6 md:px-12 py-4 sm:py-16 rounded-lg relative overflow-hidden bg-[url('/eligibilityLine.png')] bg-cover bg-center">
         <div className="max-w-7xl mx-auto">
           {/* Heading */}
           <div className="text-left mb-10">
@@ -148,13 +156,13 @@ export default function Services() {
           </div>
 
           {/* GRID */}
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
+          <div className="grid lg:grid-cols-2 gap-2 sm:gap-8 items-start">
             
             {/* LEFT EMPTY FOR DESIGN BALANCE */}
             <div className="hidden lg:block"></div>
 
             {/* RIGHT CARDS */}
-            <div className="space-y-8">
+            <div className="space-y-3 sm:space-y-8">
               {/* Funding Card */}
               <div className="bg-white rounded-3xl p-6 shadow-lg">
                 <div className="inline-block bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-semibold mb-4">

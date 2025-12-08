@@ -84,7 +84,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="p-2 flex flex-col gap-20 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0]">
+    <div className="p-2 flex flex-col gap-2 sm:gap-6 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0]">
       {/* HEADER */}
       <div className="relative bg-[#98C44B] w-full py-28 md:py-36 rounded-lg flex flex-col items-center bg-[url('/Line2.png')] bg-no-repeat bg-left bg-cover">
         <p className="text-center font-semibold text-4xl sm:text-6xl md:text-7xl text-[#003A11] leading-tight">
@@ -93,7 +93,7 @@ export default function Navbar() {
       </div>
 
       {/* ABOUT TEXT */}
-      <div className="px-6 md:px-16 flex flex-col gap-10">
+      <div className="px-6 md:px-16 flex flex-col gap-4 sm:gap-10">
         <div className="w-28 h-24 mx-auto">
           <img src="/poornaya.png" className="w-full h-full object-contain" />
         </div>
@@ -124,63 +124,82 @@ export default function Navbar() {
       </div>
 
       {/* TEAM SECTION */}
-      <section className="w-full py-4 md:py-16 px-6 md:px-16">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          {/* LEFT */}
+      <section className="w-full py-0 md:py-2 px-6 md:px-16 ">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+          {/* LEFT SIDE */}
           <div>
             <h2 className="text-4xl md:text-5xl font-semibold">
               Meet Our Team
             </h2>
-            <p className="mt-4 text-gray-600 leading-relaxed max-w-sm">
+            <p className="mt-2 text-gray-700 max-w-sm">
               Behind Every Milestone Is A Team That Powers The Vision
             </p>
 
-            <div className="flex gap-4 mt-8">
+            <div className="flex gap-4 mt-6 justify-center sm:justify-start">
               <button
                 onClick={prev}
-                className="w-10 h-10 rounded-md bg-green-800 text-white flex items-center justify-center hover:bg-green-900"
+                className="w-10 h-10 rounded-md bg-green-900 text-white flex items-center justify-center hover:bg-green-800"
               >
                 <ChevronLeft size={20} />
               </button>
               <button
                 onClick={next}
-                className="w-10 h-10 rounded-md bg-green-800 text-white flex items-center justify-center hover:bg-green-900"
+                className="w-10 h-10 rounded-md bg-green-900 text-white flex items-center justify-center hover:bg-green-800"
               >
                 <ChevronRight size={20} />
               </button>
             </div>
           </div>
 
-          {/* RIGHT SLIDER */}
-          <div className="grid grid-cols-1 mx-auto sm:grid-cols-2 gap-4 sm:gap-16 ">
-            {[team[current], team[current + 1]].map(
-              (item, idx) =>
-                item && (
-                  <div
-                    key={idx}
-                    className="w-[250px] sm:w-[280px] md:w-[320px] transition-all"
-                  >
-                    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                      <div className="relative w-full h-56">
-                        <img
-                          src={item.img}
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
-                      <div className="p-5">
-                        <h3 className="text-lg font-semibold">{item.name}</h3>
+          {/* RIGHT SIDE — SLIDER AREA */}
+          <div className="w-full">
+            {/* MOBILE → ONLY ONE CARD */}
+            <div className="sm:hidden flex justify-center">
+              {team[current] && (
+                <div className="w-[280px]">
+                  <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                    <img
+                      src={team[current].img}
+                      className="w-full h-56 object-cover"
+                    />
+                    <div className="p-4">
+                      <h3 className="font-semibold">{team[current].name}</h3>
+                      <p className="text-sm text-gray-600">
+                        {team[current].role}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* DESKTOP → TWO CARDS LIKE YOUR DESIGN */}
+            <div className="hidden sm:grid grid-cols-2 gap-8">
+              {[team[current], team[current + 1]].map(
+                (item, idx) =>
+                  item && (
+                    <div
+                      key={idx}
+                      className="bg-white rounded-xl shadow-md overflow-hidden w-full"
+                    >
+                      <img
+                        src={item.img}
+                        className="w-full h-60 object-cover"
+                      />
+                      <div className="p-4">
+                        <h3 className="font-semibold">{item.name}</h3>
                         <p className="text-sm text-gray-600">{item.role}</p>
                       </div>
                     </div>
-                  </div>
-                )
-            )}
+                  )
+              )}
+            </div>
           </div>
         </div>
       </section>
 
       {/* TRAINING & QUALIFICATION */}
-      <section className="w-full py-16 px-6 md:px-16">
+      <section className="w-full py-2 sm:py-8 px-6 ">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* IMAGE CARD */}
           <div className="relative rounded-2xl overflow-hidden shadow-xl h-[400px] sm:h-[500px]">
@@ -201,15 +220,23 @@ export default function Navbar() {
           {/* LIST */}
           <div className="space-y-6">
             {qualifications.map((item, index) => (
-              <div key={index} className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-green-900 flex items-center justify-center">
-                  <item.icon className="w-5 h-5 text-white" />
+              <div
+                key={index}
+                className="flex items-start gap-3 sm:gap-4 md:gap-6"
+              >
+                {/* Icon wrapper */}
+                <div className="min-w-12 min-h-12 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-green-900 flex items-center justify-center shrink-0">
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                 </div>
-                <div>
-                  <h3 className="text-lg md:text-xl font-semibold">
+
+                {/* Text Section */}
+                <div className="flex flex-col">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-600">{item.description}</p>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                    {item.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -218,12 +245,14 @@ export default function Navbar() {
       </section>
 
       {/* CORE VALUES */}
-      <section className="w-full py-16 px-6 md:px-16 bg-[#D4E6D4] bg-[url('/Line3.png')] bg-no-repeat bg-left bg-cover rounded-lg">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <section className="w-full py-4 sm:py-12 px-4 sm:px-8 md:px-16 bg-[#D4E6D4] bg-[url('/Line3.png')] bg-no-repeat bg-left bg-cover rounded-lg">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 items-start">
           {/* TITLE */}
           <div>
-            <h2 className="text-4xl md:text-6xl font-bold">Core Values</h2>
-            <p className="text-gray-700 text-lg max-w-md mt-3">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
+              Core Values
+            </h2>
+            <p className="text-gray-700 text-base sm:text-lg max-w-md gap-1 sm:gap-4">
               The Principals That Guide Every Interactions And Decisions
             </p>
           </div>
@@ -232,41 +261,40 @@ export default function Navbar() {
           <div className="space-y-6">
             {values.map((value, index) => (
               <div key={index} className="border-b border-gray-400 pb-6">
+                {/* FIRST ITEM WITH IMAGE */}
                 {index === 0 ? (
                   <div className="space-y-4">
-                    <h3 className="text-2xl font-semibold">{value.title}</h3>
+                    <h3 className="text-xl sm:text-2xl font-semibold">
+                      {value.title}
+                    </h3>
 
-                    <div className="relative rounded-2xl border-8 border-white overflow-hidden">
-                      <img src={value.image} className="w-full object-cover" />
+                    <div className="relative rounded-3xl border-8 sm:border-6 md:border-8 border-white overflow-hidden">
+                      <img
+                        src={value.image}
+                        className="w-full h-52 sm:h-64 md:h-80 object-cover"
+                      />
 
-                      {/* GRADIENT OVERLAY */}
+                      {/* Gradient Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end z-10">
-                        <div className="p-6 flex items-end max-w-2/3">
-                          <p className="text-white text-sm flex-1">
+                        <div className="p-4 sm:p-6">
+                          <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed max-w-2/3">
                             {value.description}
                           </p>
                         </div>
                       </div>
 
-                      {/* BUTTON ON TOP OF EVERYTHING */}
-                      <div className="bg-white w-1/3 p-3.5 rounded-tl-2xl  absolute bottom-0 right-0 z-20 
-                      after:content-[''] after:absolute after:bottom-0 after:sm:bottom-0 after:-left-3.5 after:sm:-left-4
-    after:w-4 after:h-4
-    after:bg-[radial-gradient(circle_at_top_left,transparent_70%,white_70%)]
-    after:rotate-0
-                      
-                      before:content-[''] before:absolute before:-top-3 before:sm:-top-3.5 before:right-0
-    before:w-4 before:h-4
-    before:bg-[radial-gradient(circle_at_bottom_right,transparent_70%,white_70%)]
-    before:-rotate-180">
-                        <button className="w-full block bg-green-900 hover:bg-green-800 text-white px-6 py-2  rounded-full text-sm">
+                      {/* Button Block */}
+                      <div className="bg-white w-1/3 p-3.5 rounded-tl-2xl absolute bottom-0 right-0 z-20 after:content-[''] after:absolute after:bottom-0 after:sm:bottom-0 after:-left-3.5 after:sm:-left-4 after:w-4 after:h-4 after:bg-[radial-gradient(circle_at_top_left,transparent_70%,white_70%)] after:rotate-0 before:content-[''] before:absolute before:-top-3 before:sm:-top-3.5 before:right-0 before:w-4 before:h-4 before:bg-[radial-gradient(circle_at_bottom_right,transparent_70%,white_70%)] before:-rotate-180">
+                        <button className="w-full bg-green-900 hover:bg-green-800 text-white px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm">
                           Get Started
                         </button>
                       </div>
                     </div>
                   </div>
                 ) : (
-                  <h3 className="text-2xl font-semibold">{value.title}</h3>
+                  <h3 className="text-xl sm:text-2xl font-semibold">
+                    {value.title}
+                  </h3>
                 )}
               </div>
             ))}
