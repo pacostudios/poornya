@@ -1,73 +1,60 @@
 "use client";
 
 import Footer from "@/components/Footer";
-import {
-  ArrowUpRight,
-  CheckCircle2,
-  MoveRight,
-} from "lucide-react";
+import { ArrowUpRight, CheckCircle2, MoveRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export default function Services() {
+  const router = useRouter();
 
-    const router = useRouter();
-  
   const services = [
     {
       title: "Functional Behaviour Assessments",
       description:
         "Tailoring Services To Environment For Growth Where Individuals Feel Protected And Understood",
-      image:
-        "./functionalBehav.png",
+      image: "./functionalBehav.png",
     },
     {
       title: "Behaviour Support Plans",
       description:
         "Personalized Strategies That Promote Safety, Independence, And Positive Behaviour Changes",
-      image:
-        "./supportPlan.png",
+      image: "./supportPlan.png",
     },
     {
       title: "Trauma-Informed Support",
       description:
         "Gentle, Respectful, And Emotionally Safe Approaches Rooted In Trauma-Informed Care Principles",
-      image:
-        "./Trauma.png",
+      image: "./Trauma.png",
     },
     {
       title: "Autism & Forensic Care",
       description:
         "Targeted Support For Participants Within Forensic, Neurodivergent, Or Dual-Diagnosis Contexts",
-      image:
-        "./autism.png",
+      image: "./autism.png",
     },
     {
       title: "Mental Health & Self-Advocacy",
       description:
         "Building Resilience, Communication, And Emotional Regulation Through Structured Guidance",
-      image:
-        "./mentalH.png",
+      image: "./mentalH.png",
     },
     {
       title: "Training & Guidance",
       description:
         "Equipping Support Networks To Apply Behaviour Plans Effectively And Compassionately",
-      image:
-        "./traing.png",
+      image: "./traing.png",
     },
     {
       title: "Ongoing Review & Monitoring",
       description:
         "Continuous Progress Evaluations To Ensure Strategies Stay Relevant And Effective",
-      image:
-        "./ongoingreview.png",
+      image: "./ongoingreview.png",
     },
     {
       title: "Reducing Restrictive Practices",
       description:
         "Encouraging Independence And Dignity By Minimizing Restrictive Interventions Safely",
-      image:
-        "./reducing.png",
+      image: "./reducing.png",
     },
   ];
 
@@ -79,7 +66,6 @@ export default function Services() {
 
   return (
     <div className="flex flex-col gap-3 sm:gap-16 p-2 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0]">
-      
       {/* HERO SECTION */}
       <div className="bg-[#98C44B] w-full py-24 md:py-36 rounded-lg bg-[url('/serviceLine.png')] bg-no-repeat bg-bottom-right bg-contain">
         <p className="text-center font-semibold text-4xl md:text-6xl lg:text-7xl text-[#003A11]">
@@ -92,7 +78,8 @@ export default function Services() {
         <div className="text-center max-w-4xl mx-auto">
           <p className="font-medium text-xl md:text-3xl leading-relaxed">
             We Deliver Positive Behaviour Support For Children, Young People,
-            And Adults — Especially Those With Multiple Or Complex Support Needs.
+            And Adults — Especially Those With Multiple Or Complex Support
+            Needs.
           </p>
         </div>
 
@@ -128,10 +115,11 @@ export default function Services() {
                     </p>
 
                     <button
-                    onClick={()=>{
-router.push('/contact');
-                    }}
-                     className="bg-[#003A11] cursor-pointer w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center group-hover:scale-110 transition-all">
+                      onClick={() => {
+                        router.push("/contact");
+                      }}
+                      className="bg-[#003A11] cursor-pointer w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center group-hover:scale-110 transition-all"
+                    >
                       <ArrowUpRight className="w-4 md:w-5 h-4 md:h-5 text-white" />
                     </button>
                   </div>
@@ -157,7 +145,6 @@ router.push('/contact');
 
           {/* GRID */}
           <div className="grid lg:grid-cols-2 gap-2 sm:gap-8 items-start">
-            
             {/* LEFT EMPTY FOR DESIGN BALANCE */}
             <div className="hidden lg:block"></div>
 

@@ -20,11 +20,11 @@ export default function contact() {
 
           {/* ABSOLUTE IMAGE - NOW RESPONSIVE */}
           <div className="absolute -top-10 sm:-top-16 md:-top-16 
-          left-1/2 -translate-x-1/2 lg:translate-x-0 lg:left-0 flex justify-center">
+          -left-20 flex justify-center h-full">
             <img
               src="/phone.png"
               alt="Phone"
-              className="object-contain w-40 hidden lg:block sm:w-52 md:w-64 lg:w-72"
+              className="object-contain w-40 hidden lg:block sm:w-52 md:w-6 lg:w-12/12"
             />
           </div>
 

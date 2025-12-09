@@ -2,6 +2,7 @@
 
 import {
   Activity,
+  ArrowUpRight,
   Brain,
   Facebook,
   GitGraph,
@@ -16,7 +17,6 @@ import { useRouter } from "next/navigation";
 import { use } from "react";
 
 export default function Footer() {
-
   const router = useRouter();
   const services = [
     {
@@ -34,11 +34,13 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-[#98C44B] pt-4 sm:pt-16 md:pt-4 sm:pb-8 px-4 sm:px-6 lg:px-8 rounded-lg bg-[url('/footerLine.png')] bg-no-repeat bg-[length:100%_auto]
-bg-bottom-left bg-overflow-hidden">
+    <footer
+      className="relative bg-[#98C44B] pt-4 sm:pt-16 md:pt-4 sm:pb-8 px-4 sm:px-6 lg:px-8 rounded-lg bg-[url('/footerLine.png')] bg-no-repeat bg-[length:100%_auto]
+bg-bottom-left bg-overflow-hidden"
+    >
       {/* CTA SECTION */}
       <section className="pb-3 sm:pb-10 md:pb-12 max-w-8xl mx-auto">
-        <div className="relative bg-white border-2 sm:border-4 border-lime-500 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 overflow-hidden">
+        <div className="relative bg-white border-2 sm:border-4 border-lime-500 rounded-2xl sm:rounded-3xl px-6 sm:px-8 md:px-12 py-6 sm:py-8 md:py-16 overflow-hidden">
           {/* Floating Icons - Hidden on mobile/tablet */}
           <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden xl:block w-[180px] h-[180px]">
             <div
@@ -46,7 +48,7 @@ bg-bottom-left bg-overflow-hidden">
               style={{
                 animationDelay: "0.5s",
                 animationDuration: "3s",
-                top: "-20%",
+                top: "-30%",
                 left: "70%",
                 transform: "translate(-50%, 0)",
               }}
@@ -59,7 +61,7 @@ bg-bottom-left bg-overflow-hidden">
               style={{
                 animationDelay: "0s",
                 animationDuration: "3s",
-                top: "-10%",
+                top: "-8%",
                 left: "30%",
                 transform: "translate(-50%, 0)",
               }}
@@ -85,7 +87,7 @@ bg-bottom-left bg-overflow-hidden">
               style={{
                 animationDelay: "1s",
                 animationDuration: "3s",
-                top: "74%",
+                top: "78%",
                 left: "35%",
                 transform: "translate(-50%, -50%)",
               }}
@@ -98,7 +100,7 @@ bg-bottom-left bg-overflow-hidden">
               style={{
                 animationDelay: "1.5s",
                 animationDuration: "3s",
-                top: "95%",
+                top: "98%",
                 left: "75%",
                 transform: "translate(-50%, -50%)",
               }}
@@ -128,11 +130,12 @@ bg-bottom-left bg-overflow-hidden">
             </h2>
 
             <button
-            onClick={()=>{
-              router.push('/contact');
-            }}
-             className="inline-flex items-center gap-2 sm:gap-3 bg-[#98C44B] text-gray-900 font-semibold px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105 text-xs sm:text-sm">
-              <span className="uppercase">Book a Consultation</span>
+              onClick={() => {
+                router.push("/contact");
+              }}
+              className="inline-flex items-center mb-4 gap-2 sm:gap-3 bg-[#98C44B] text-gray-900 font-semibold px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105 text-xs sm:text-sm"
+            >
+              <span className="uppercase">BOOK A CONSULTATION</span>
               <div className="w-5 h-5 sm:w-6 sm:h-6 bg-gray-900 rounded-full flex items-center justify-center">
                 <svg
                   className="w-3 h-3 sm:w-4 sm:h-4 text-white"
@@ -140,12 +143,7 @@ bg-bottom-left bg-overflow-hidden">
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
+                  <ArrowUpRight />
                 </svg>
               </div>
             </button>
@@ -154,7 +152,15 @@ bg-bottom-left bg-overflow-hidden">
       </section>
 
       {/* Person Image - Responsive positioning */}
-      <div className="relative sm:absolute sm:bottom-32 md:bottom-40 sm:left-1/2 sm:-translate-x-1/2 w-40 h-48 sm:w-44 sm:h-52 md:w-52 md:h-60 rounded-lg overflow-hidden shadow-xl mx-auto mb-6 sm:mb-0">
+      <div
+        className="
+    hidden sm:block
+    relative sm:absolute sm:bottom-32 md:bottom-40
+    sm:left-1/2 sm:-translate-x-1/2
+    sm:w-52 sm:h-60 md:w-64 md:h-72 lg:w-72 lg:h-80
+    rounded-lg overflow-hidden shadow-xl
+  "
+      >
         <img
           src="/user2.png"
           className="object-cover w-full h-full"
@@ -163,12 +169,12 @@ bg-bottom-left bg-overflow-hidden">
       </div>
 
       {/* Big POORNAYA Text - Responsive sizing */}
-      <p className="absolute bottom-0 left-1/2 -translate-x-1/2 text-6xl sm:text-8xl md:text-[120px] lg:text-[180px] xl:text-[240px] font-bold text-[#0E4037] leading-none select-none whitespace-nowrap opacity-80 sm:opacity-100">
+      <p className="absolute bottom-0 left-1/2 -translate-x-1/2 text-6xl sm:text-8xl md:text-[120px] lg:text-[180px] xl:text-[270px] font-bold text-[#0E4037] leading-none select-none whitespace-nowrap opacity-80 sm:opacity-100">
         POORNAYA
       </p>
 
       {/* Main Content - Responsive layout */}
-      <div className="relative z-10 max-w-8xl mx-auto flex flex-col sm:flex-row justify-between gap-2 sm:gap-6 md:gap-8 mb-20 sm:mb-36 md:mb-40 pt-0 sm:pt-0">
+      <div className="relative z-10 max-w-8xl mx-auto flex flex-col sm:flex-row justify-between gap-2 sm:gap-6 md:gap-8 mb-20 sm:mb-36 md:mb-52 pt-0 sm:pt-0">
         {/* Left */}
         <div className="w-full sm:w-auto">
           <div className="w-24 h-20 sm:w-28 sm:h-24 md:w-32 md:h-28 bg-white rounded-lg flex items-center justify-center mb-4 mx-auto sm:mx-0">
@@ -199,6 +205,12 @@ bg-bottom-left bg-overflow-hidden">
               <MapPin className="w-4 h-4" />
               <span>Melbourne, Victoria</span>
             </div>
+            <div className="text-[#003A11] font-semibold gap-2 justify-center sm:justify-start">
+              <p className="">
+              © 2025 Poornaya. All Rights Reserved.
+            </p>
+            </div>
+            
           </div>
         </div>
 

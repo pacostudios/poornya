@@ -103,25 +103,25 @@ export default function Home() {
             >
               <span
                 className="
-    bg-white rounded-tr-lg sm:rounded-tr-[18px] p-2 relative inline-block pr-4
+    bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0] rounded-tr-lg sm:rounded-tr-[18px] p-2 relative inline-block pr-4
 
     /* RIGHT BOTTOM CURVE */
     after:content-[''] after:absolute after:bottom-1 after:sm:bottom-2.5 after:-right-4
     after:w-4 after:h-4
-    after:bg-[radial-gradient(circle_at_top_left,transparent_70%,white_70%)]
+    after:bg-[radial-gradient(circle_at_top_left,transparent_70%,#EFF3D0_70%)]
     after:rotate-90
 
     /* LEFT TOP CURVE */
     before:content-[''] before:absolute before:-top-3.5 before:sm:-top-3.5 before:left-0
     before:w-4 before:h-4
-    before:bg-[radial-gradient(circle_at_bottom_right,transparent_70%,white_70%)]
+    before:bg-[radial-gradient(circle_at_bottom_right,transparent_70%,#FBFBFB_70%)]
     before:-rotate-90
   "
               >
                 Where Positive
               </span>
               <br />
-              <span className="bg-white rounded-tr-lg sm:rounded-tr-[18px] p-2 relative  after:content-[''] after:absolute after:bottom-0 after:sm:bottom-1 after:-right-4 after:w-4 after:h-4 after:bg-[radial-gradient(circle_at_top_left,transparent_70%,white_70%)] after:rotate-90">
+              <span className="bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0] rounded-tr-lg sm:rounded-tr-[18px] p-2 relative  after:content-[''] after:absolute after:bottom-0 after:sm:bottom-1 after:-right-4 after:w-4 after:h-4 after:bg-[radial-gradient(circle_at_top_left,transparent_70%,#EFF3D0_70%)] after:rotate-90">
                 Change Feels Safe
               </span>
             </p>
