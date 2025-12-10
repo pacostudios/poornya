@@ -38,10 +38,25 @@ export default function Navbar() {
         "Building Secure Environments For Growth Where Individuals Feel Protected And Valued",
       image: "./saftyTrust.png",
     },
-    { title: "Respect And Dignity", description: "" },
-    { title: "Empathy And Accountability", description: "" },
-    { title: "Cultural Sensitivity", description: "" },
+    {
+      title: "Respect And Dignity",
+      description:
+        "Promoting equality and acknowledging every individual’s worth.",
+      image: "./respect.png",
+    },
+    {
+      title: "Empathy And Accountability",
+      description:
+        "Understanding others’ perspectives while taking responsibility.",
+      image: "./empathy.png",
+    },
+    {
+      title: "Cultural Sensitivity",
+      description: "Respecting and valuing diverse cultural backgrounds.",
+      image: "./culture.png",
+    },
   ];
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const [current, setCurrent] = useState(0);
 
@@ -260,21 +275,29 @@ export default function Navbar() {
           {/* ITEMS */}
           <div className="space-y-6">
             {values.map((value, index) => (
-              <div key={index} className="border-b border-gray-400 pb-6">
-                {/* FIRST ITEM WITH IMAGE */}
-                {index === 0 ? (
-                  <div className="space-y-4">
-                    <h3 className="text-xl sm:text-2xl font-semibold">
-                      {value.title}
-                    </h3>
+              <div
+                key={index}
+                className=" pb-6 cursor-pointer"
+              >
+                {/* TITLE */}
+                <h3
+                  onClick={() => setActiveIndex(index)}
+                  className="border-b border-[#000000] text-xl sm:text-2xl font-semibold flex justify-between items-center py-3"
+                >
+                  {value.title}
 
+                </h3>
+
+                {/* CONTENT (only open when active) */}
+                {activeIndex === index && (
+                  <div className="mt-4 space-y-4">
                     <div className="relative rounded-3xl border-8 sm:border-6 md:border-8 border-white overflow-hidden">
                       <img
                         src={value.image}
                         className="w-full h-52 sm:h-64 md:h-80 object-cover"
                       />
 
-                      {/* Gradient Overlay */}
+                      {/* Gradient */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end z-10">
                         <div className="p-4 sm:p-6">
                           <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed max-w-2/3">
@@ -291,10 +314,6 @@ export default function Navbar() {
                       </div>
                     </div>
                   </div>
-                ) : (
-                  <h3 className="text-xl sm:text-2xl font-semibold">
-                    {value.title}
-                  </h3>
                 )}
               </div>
             ))}
