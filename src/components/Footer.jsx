@@ -169,7 +169,7 @@ bg-bottom-left bg-overflow-hidden"
       </div>
 
       {/* Big POORNAYA Text - Responsive sizing */}
-      <p className="absolute bottom-0 left-1/2 -translate-x-1/2 text-7xl sm:text-8xl md:text-[120px] lg:text-[180px] xl:text-[270px] font-bold text-[#0E4037] leading-none select-none whitespace-nowrap opacity-80 sm:opacity-100">
+      <p className="absolute bottom-0 left-1/2 -translate-x-1/2 text-9xl sm:text-8xl md:text-[120px] lg:text-[180px] xl:text-[270px] font-bold text-[#0E4037] leading-none select-none whitespace-nowrap opacity-80 sm:opacity-100">
         POORNAYA
       </p>
 
@@ -179,7 +179,7 @@ bg-bottom-left bg-overflow-hidden"
         <div className="w-full sm:w-auto">
           <div className="w-24 h-20 sm:w-28 sm:h-24 md:w-32 md:h-28 bg-white rounded-lg flex items-center justify-center mb-4 mx-auto sm:mx-0">
             <img
-              src="/poornaya.png"
+              src="/Logo1.png"
               className="w-20 h-16 sm:w-24 sm:h-20 md:w-28 md:h-24 object-contain"
               alt="Poornaya"
             />

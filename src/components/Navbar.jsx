@@ -21,13 +21,12 @@ export default function Navbar() {
     <nav className="fixed top-2 sm:top-4 left-0 w-full z-50 px-3 sm:px-6 py-2">
       <div className="flex items-center justify-between bg-[#FFFFFF66] backdrop-blur-lg border border-white/30 rounded-[24px] sm:rounded-[32px] shadow-lg px-3 sm:px-4 md:px-2 py-2">
         {/* Logo */}
-        <div className="flex items-center gap-2 flex-shrink-0">
-          <img
-            src="/logoMain.png"
-            alt="Logo"
-            className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full"
-          />
-        </div>
+
+        <img
+          src="/Logo1.png"
+          alt="Logo"
+          className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full object-cover object-center"
+        />
 
         {/* Desktop Menu */}
         <ul className="hidden lg:flex gap-6 xl:gap-10 text-[14px] xl:text-[16px] font-medium">
