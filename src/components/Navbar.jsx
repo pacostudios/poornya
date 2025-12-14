@@ -23,7 +23,7 @@ export default function Navbar() {
         {/* Logo */}
 
         <img
-          src="./logoNew.png"
+          src="/lkimg.jpg"
           alt="Logo1"
           className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full object-cover object-center"
         />
