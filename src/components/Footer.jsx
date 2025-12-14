@@ -169,7 +169,7 @@ bg-bottom-left bg-overflow-hidden"
       </div>
 
       {/* Big POORNAYA Text - Responsive sizing */}
-      <p className="absolute bottom-0 left-1/2 -translate-x-1/2 text-9xl sm:text-8xl md:text-[120px] lg:text-[180px] xl:text-[270px] font-bold text-[#0E4037] leading-none select-none whitespace-nowrap opacity-80 sm:opacity-100">
+      <p className="absolute bottom-0 left-1/2 -translate-x-1/2 text-7xl sm:text-8xl md:text-[120px] lg:text-[180px] xl:text-[270px] font-bold text-[#0E4037] leading-none select-none whitespace-nowrap opacity-80 sm:opacity-100">
         POORNAYA
       </p>
 
