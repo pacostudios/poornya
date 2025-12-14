@@ -24,7 +24,7 @@ export default function Navbar() {
 
         <img
           src="/Logo1.png"
-          alt="Logo"
+          alt="Logo1"
           className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full object-cover object-center"
         />
 
