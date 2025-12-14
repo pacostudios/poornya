@@ -102,7 +102,7 @@ export default function Navbar() {
           {/* Mobile Button */}
           <div className="p-4 border-t border-gray-200">
             <Link
-              href="/contact"
+              href="./contact"
               onClick={() => setIsMenuOpen(false)}
               className="flex bg-[#003C1C] text-white px-6 py-3 rounded-full items-center justify-center gap-3 hover:bg-[#012e14] transition text-[15px] font-medium"
             >
