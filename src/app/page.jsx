@@ -295,11 +295,11 @@ md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 du
                     </div>
                     <div className="flex items-start gap-3">
                       <div>
-                        <h3 className="text-[13px] font-semibold text-emerald-900 mb-1">
+                        <h3 className="text-sm sm:text-base font-semibold text-emerald-900 mb-1">
                           Person-Centred Care
                         </h3>
 
-                        <p className="text-[11px] text-gray-700 leading-[1.4]">
+                        <p className="text-xs sm:text-sm text-gray-700 leading-[1.4]">
                           Your Voice Guides Every Plan. We Listen, Understand,
                           And Build Strategies Around Your Unique Needs.
                         </p>
@@ -324,11 +324,11 @@ w-48 md:w-56
                     </div>
                     <div className="flex items-start gap-3">
                       <div>
-                        <h3 className="text-[13px] font-semibold text-emerald-900 mb-1">
+                        <h3 className="text-sm sm:text-base font-semibold text-emerald-900 mb-1">
                           Evidence-Based Practice
                         </h3>
 
-                        <p className="text-[11px] text-gray-700 leading-[1.4]">
+                        <p className="text-xs sm:text-sm text-gray-700 leading-[1.4]">
                           Proven Methods For Real, Measurable Change. Our
                           Approaches Are Grounded In Research.
                         </p>
@@ -352,11 +352,11 @@ w-48 md:w-56
                     </div>
                     <div className="flex items-start gap-3">
                       <div>
-                        <h3 className="text-[13px] font-semibold text-emerald-900 mb-1">
+                        <h3 className="text-sm sm:text-base font-semibold text-emerald-900 mb-1">
                           Empowerment First
                         </h3>
 
-                        <p className="text-[11px] text-gray-700 leading-[1.4]">
+                        <p className="text-xs sm:text-sm text-gray-700 leading-[1.4]">
                           Building Skills For Autonomy And Growth. We Focus On
                           Developing Capabilities For Independence.
                         </p>
@@ -380,11 +380,11 @@ w-48 md:w-56
                     </div>
                     <div className="flex items-start gap-3">
                       <div>
-                        <h3 className="text-[13px] font-semibold text-emerald-900 mb-1">
+                        <h3 className="text-sm sm:text-base font-semibold text-emerald-900 mb-1">
                           Collaboration Always
                         </h3>
 
-                        <p className="text-[11px] text-gray-700 leading-[1.4]">
+                        <p className="text-xs sm:text-sm text-gray-700 leading-[1.4]">
                           Working With Your Entire Care Team To Ensure Holistic
                           Outcomes And Consistent Support.
                         </p>
