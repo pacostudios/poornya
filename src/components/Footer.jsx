@@ -181,7 +181,7 @@ bg-bottom-left bg-overflow-hidden"
             <img
               src="./lkimg.jpg"
               className=""
-              alt="Poornaya"
+              alt="Poornya"
             />
             
           </div>
