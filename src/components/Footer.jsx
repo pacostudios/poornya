@@ -179,7 +179,7 @@ bg-bottom-left bg-overflow-hidden"
         <div className="w-full sm:w-auto">
           <div className="w-24 h-20 sm:w-28 sm:h-24 md:w-32 md:h-28 bg-white rounded-lg flex items-center justify-center mb-4 mx-auto sm:mx-0">
             <img
-              src="/logoNew.png"
+              src="/IMG_6628.png"
               className=""
               alt="Poorna"
             />
