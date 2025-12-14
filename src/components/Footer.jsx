@@ -180,9 +180,10 @@ bg-bottom-left bg-overflow-hidden"
           <div className="w-24 h-20 sm:w-28 sm:h-24 md:w-32 md:h-28 bg-white rounded-lg flex items-center justify-center mb-4 mx-auto sm:mx-0">
             <img
               src="/logoNew.png"
-              className="w-20 h-16 sm:w-24 sm:h-20 md:w-28 md:h-24 object-contain"
+              className=""
               alt="Poornaya"
             />
+            
           </div>
 
           <p className="text-xs sm:text-sm text-black mb-4 font-semibold leading-relaxed text-center sm:text-left max-w-sm mx-auto sm:mx-0">
