@@ -181,7 +181,7 @@ bg-bottom-left bg-overflow-hidden"
             <img
               src="/logoNew.png"
               className=""
-              alt="Poornaya"
+              alt="Poorna"
             />
             
           </div>
