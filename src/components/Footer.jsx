@@ -33,6 +33,13 @@ export default function Footer() {
     },
   ];
 
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Referal", href: "/referal" },
+    { label: "Contact Us", href: "/contact" },
+  ];
   return (
     <footer
       className="relative bg-[#98C44B] pt-4 sm:pt-16 md:pt-4 sm:pb-8 px-4 sm:px-6 lg:px-8 rounded-lg bg-[url('/footerLine.png')] bg-no-repeat bg-[length:100%_auto]
@@ -183,7 +190,6 @@ bg-bottom-left bg-overflow-hidden"
               className="w-20 h-16 sm:w-24 sm:h-20 md:w-28 md:h-24 object-contain"
               alt="Poornaya"
             />
-            
           </div>
 
           <p className="text-xs sm:text-sm text-black mb-4 font-semibold leading-relaxed text-center sm:text-left max-w-sm mx-auto sm:mx-0">
@@ -207,28 +213,23 @@ bg-bottom-left bg-overflow-hidden"
               <span>Melbourne, Victoria</span>
             </div>
             <div className="text-[#003A11] font-semibold gap-2 justify-center sm:justify-start">
-              <p className="">
-              © 2025 Poornaya. All Rights Reserved.
-            </p>
+              <p className="">© 2025 Poornaya. All Rights Reserved.</p>
             </div>
-            
           </div>
         </div>
 
         {/* Right Navigation */}
         <div className="flex flex-col items-center sm:items-end gap-0 sm:gap-4">
-          <nav className="flex flex-col items-center sm:items-end gap-2 sm:gap-3 text-center sm:text-right">
-            {["Home", "About Us", "Services", "Referral", "Contact Us"].map(
-              (item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="text-base sm:text-lg font-semibold text-gray-900 hover:text-emerald-900 transition-colors"
-                >
-                  {item}
-                </a>
-              )
-            )}
+          <nav className="flex flex-row sm:flex-col items-center sm:items-end gap-2 sm:gap-3 text-center sm:text-right">
+            {navLinks.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-base sm:text-lg font-semibold text-[#003A11] transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
           </nav>
 
           {/* Social */}
