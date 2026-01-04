@@ -120,7 +120,7 @@ export default function contact() {
                       <p className="text-[#000000B2] font-medium">Email</p>
                     </div>
                     <p className="text-black font-semibold">
-                      info@company.com.au <br />
+                      info@poornaya.com <br />
                       <span className="text-sm text-[#000000B2]">
                         Real Support With a Heart
                       </span>

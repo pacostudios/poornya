@@ -206,7 +206,7 @@ bg-bottom-left bg-overflow-hidden"
             </div>
             <div className="flex items-center font-semibold gap-2 justify-center sm:justify-start">
               <Mail className="w-4 h-4" />
-              <span>Info@Poornaya.Com.Au</span>
+              <span>info@poornaya.com</span>
             </div>
             <div className="flex items-center font-semibold gap-2 justify-center sm:justify-start">
               <MapPin className="w-4 h-4" />
