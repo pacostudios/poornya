@@ -1,6 +1,6 @@
 export default function sitemap() {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
+    process.env.NEXT_PUBLIC_SITE_URL || "https://poornaya.com";
 
   const lastModified = new Date();
 
