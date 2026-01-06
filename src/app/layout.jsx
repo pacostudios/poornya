@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={urbanist.variable}>
       <head>
-        <link rel="icon" href="/favicon.png" sizes="96x96" />
+        <link rel="icon" href="/favicon.png" sizes="48x48" />
       </head>
       <body
       >
