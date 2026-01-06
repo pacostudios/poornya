@@ -106,7 +106,7 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
               className="flex bg-[#003C1C] text-white px-6 py-3 rounded-full items-center justify-center gap-3 hover:bg-[#012e14] transition text-[15px] font-medium"
             >
-              <span>Get In Touch</span>
+              <span>Get In touch</span>
               <span className="bg-white text-[#003A11] rounded-full p-1.5">
                 <ArrowUpRight size={16} />
               </span>
