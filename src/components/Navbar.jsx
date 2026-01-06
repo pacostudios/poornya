@@ -55,7 +55,7 @@ export default function Navbar() {
           href="/contact"
           className="hidden sm:flex bg-[#003C1C] text-white pl-4 md:pl-6 pr-1 py-2 rounded-full items-center gap-2 md:gap-4 hover:bg-[#012e14] transition flex-shrink-0 text-sm md:text-base"
         >
-          <span className="whitespace-nowrap">Get In touch</span>
+          <span className="whitespace-nowrap">Get In Touch</span>
           <span className="bg-white text-[#003A11] rounded-full p-1.5 md:p-2">
             <ArrowUpRight size={16} className="md:w-[18px] md:h-[18px]" />
           </span>

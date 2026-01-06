@@ -198,7 +198,7 @@ md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 du
                   About <span className="text-[#98C44B]">US</span>
                 </h2>
 
-                <h1 className="text-gray-700 leading-relaxed">
+                <h2 className="text-gray-700 leading-relaxed">
                   At{" "}
                   <span className="font-semibold">
                     Poornava Behaviour Support
@@ -208,7 +208,7 @@ md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 du
                   Provider, We Specialise In Positive Behaviour Support (PBS) —
                   Helping Individuals With Complex Behavioural Needs Achieve
                   Their Goals Through Choice, Control, And Evidence-Based Care.
-                </h1>
+                </h2>
               </div>
 
               {/* Explore More Button */}
@@ -295,9 +295,9 @@ md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 du
                     </div>
                     <div className="flex items-start gap-3">
                       <div>
-                        <h3 className="text-sm sm:text-base font-semibold text-emerald-900 mb-1">
+                        <h2 className="text-sm sm:text-base font-semibold text-emerald-900 mb-1">
                           Person-Centred Care
-                        </h3>
+                        </h2>
 
                         <p className="text-xs sm:text-sm text-gray-700 leading-[1.4]">
                           Your Voice Guides Every Plan. We Listen, Understand,
@@ -324,9 +324,9 @@ w-48 md:w-56
                     </div>
                     <div className="flex items-start gap-3">
                       <div>
-                        <h3 className="text-sm sm:text-base font-semibold text-emerald-900 mb-1">
+                        <h2 className="text-sm sm:text-base font-semibold text-emerald-900 mb-1">
                           Evidence-Based Practice
-                        </h3>
+                        </h2>
 
                         <p className="text-xs sm:text-sm text-gray-700 leading-[1.4]">
                           Proven Methods For Real, Measurable Change. Our
@@ -352,9 +352,9 @@ w-48 md:w-56
                     </div>
                     <div className="flex items-start gap-3">
                       <div>
-                        <h3 className="text-sm sm:text-base font-semibold text-emerald-900 mb-1">
+                        <h2 className="text-sm sm:text-base font-semibold text-emerald-900 mb-1">
                           Empowerment First
-                        </h3>
+                        </h2>
 
                         <p className="text-xs sm:text-sm text-gray-700 leading-[1.4]">
                           Building Skills For Autonomy And Growth. We Focus On
@@ -380,9 +380,9 @@ w-48 md:w-56
                     </div>
                     <div className="flex items-start gap-3">
                       <div>
-                        <h3 className="text-sm sm:text-base font-semibold text-emerald-900 mb-1">
+                        <h2 className="text-sm sm:text-base font-semibold text-emerald-900 mb-1">
                           Collaboration Always
-                        </h3>
+                        </h2>
 
                         <p className="text-xs sm:text-sm text-gray-700 leading-[1.4]">
                           Working With Your Entire Care Team To Ensure Holistic
