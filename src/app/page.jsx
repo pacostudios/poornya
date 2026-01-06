@@ -150,7 +150,7 @@ export default function Home() {
 md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700"
           >
             <span className="inline-flex items-center gap-2 px-4 sm:px-11 py-1 sm:py-3 rounded-full text-[#FFFFFF] bg-[#003A11] text-lg font-semibold shadow-lg">
-              Get started <MoveRight />
+              Get Started <MoveRight />
             </span>
           </div>
         </div>
@@ -198,7 +198,7 @@ md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 du
                   About <span className="text-[#98C44B]">US</span>
                 </h2>
 
-                <p className="text-gray-700 leading-relaxed">
+                <h1 className="text-gray-700 leading-relaxed">
                   At{" "}
                   <span className="font-semibold">
                     Poornava Behaviour Support
@@ -208,7 +208,7 @@ md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 du
                   Provider, We Specialise In Positive Behaviour Support (PBS) —
                   Helping Individuals With Complex Behavioural Needs Achieve
                   Their Goals Through Choice, Control, And Evidence-Based Care.
-                </p>
+                </h1>
               </div>
 
               {/* Explore More Button */}

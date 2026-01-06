@@ -1,8 +1,12 @@
-"use client";
 import Footer from "@/components/Footer";
 import { ArrowRight, Phone, Mail, MapPin, SendHorizontal } from "lucide-react";
-
+export const metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with Poornaya for mental wellness support, counselling, and guidance.",
+};
 export default function contact() {
+  
   return (
     <div className="flex flex-col gap-3 sm:gap-16 p-2 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0]">
       {/* HEADER */}
