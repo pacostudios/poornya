@@ -150,7 +150,7 @@ export default function Home() {
 md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700"
           >
             <span className="inline-flex items-center gap-2 px-4 sm:px-11 py-1 sm:py-3 rounded-full text-[#FFFFFF] bg-[#003A11] text-lg font-semibold shadow-lg">
-              Get Started <MoveRight />
+              Get started <MoveRight />
             </span>
           </div>
         </div>
