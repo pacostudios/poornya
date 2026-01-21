@@ -18,7 +18,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-2 sm:top-4 left-0 w-full z-50 px-3 sm:px-6 py-2">
+    <div className="fixed top-2 sm:top-4 left-0 w-full z-50 px-3 sm:px-6 py-2">
       <div className="flex items-center justify-between bg-[#FFFFFF66] backdrop-blur-lg border border-white/30 rounded-[24px] sm:rounded-[32px] shadow-lg px-3 sm:px-4 md:px-2 py-2">
         {/* Logo */}
 
@@ -114,6 +114,6 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </nav>
+    </div>
   );
 }
