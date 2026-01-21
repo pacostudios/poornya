@@ -201,7 +201,7 @@ md:left-[55%] md:translate-x-0 mb-4 animate-in fade-in slide-in-from-bottom-4 du
                 <h2 className="text-gray-700 leading-relaxed">
                   At{" "}
                   <span className="font-semibold">
-                    Poornava Behaviour Support
+                    Poornaya Behaviour Support
                   </span>
                   , We Believe Every Person Deserves The Opportunity To Live A
                   Safe, Fulfilling, And Empowered Life. As A Registered NDIS
