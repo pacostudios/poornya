@@ -19,8 +19,17 @@ export const metadata = {
     url: "https://poornaya.com",
     siteName: "Poornaya",
     type: "website",
+    images: [
+      {
+        url: "/favicon.ico",
+        width: 1200,
+        height: 630,
+        alt: "Poornaya Mental Wellness",
+      },
+    ],
   },
 };
+
 const urbanist = Urbanist({
   subsets: ["latin"],
   weight: ["100","200","300","400","500","600","700","800","900"],
