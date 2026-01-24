@@ -458,7 +458,7 @@ w-48 md:w-56
                 <p className="text-[9px] sm:text-[10px] md:text-xs font-medium text-gray-900 leading-snug">
                   Poornaya is the best choice for mental support
                 </p>
-              </div>
+              </div>  
             </div>
 
             {/* 3 - Middle Left */}
