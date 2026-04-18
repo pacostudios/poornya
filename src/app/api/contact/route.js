@@ -6,8 +6,8 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user:  process.env.EMAIL_USER || "info@poornaya.com" ,
+    pass:  process.env.EMAIL_PASS || "Poornaya@123" ,
   },
 });
 
@@ -21,9 +21,9 @@ export async function POST(req) {
 
     // 🚀 send mail WITHOUT await
     transporter.sendMail({
-      from: process.env.EMAIL_USER,
+      from: process.env.EMAIL_USER || "info@poornaya.com",
       replyTo: email,
-      to: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER || "info@poornaya.com",
       subject: "New Contact Form Message",
       html: `
         <h3>Contact Form Submission</h3>
