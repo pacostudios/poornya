@@ -1,21 +1,72 @@
+"use client";
+
+import { useState } from "react";
 import Footer from "@/components/Footer";
 import { ArrowRight, Phone, Mail, MapPin, SendHorizontal } from "lucide-react";
-
-export const metadata = {
-  title: "Poornaya | Contact & Support",
-  description:
-    "Contact Poornaya for professional mental wellness, counselling, and emotional support services.",
-};
+import toast from "react-hot-toast";
+// export const metadata = {
+//   title: "Poornaya | Contact & Support",
+//   description:
+//     "Contact Poornaya for professional mental wellness, counselling, and emotional support services.",
+// };
 export default function contact() {
-  
-  
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async () => {
+    if (loading) return; // prevent double click
+
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        toast.success("Message sent successfully");
+        // ✅ CLEAR FORM
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        alert(data.error || "Failed to send");
+      }
+    } catch (err) {
+      alert("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="flex flex-col gap-3 sm:gap-16 p-2 bg-gradient-to-r from-[#FBFBFB] to-[#EFF3D0]">
       {/* HEADER */}
-      <div className="bg-[#98C44B] w-full py-28 md:py-36 rounded-lg 
-      bg-[url('/Line5.png')] bg-no-repeat bg-bottom-left">
-        <p className="text-center font-semibold 
-        text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#003A11] leading-tight">
+      <div
+        className="bg-[#98C44B] w-full py-28 md:py-36 rounded-lg 
+      bg-[url('/Line5.png')] bg-no-repeat bg-bottom-left"
+      >
+        <p
+          className="text-center font-semibold 
+        text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#003A11] leading-tight"
+        >
           Contact <br /> Us
         </p>
       </div>
@@ -23,10 +74,11 @@ export default function contact() {
       {/* MAIN SECTION */}
       <section className="w-full px-4 sm:px-6 md:px-12 ">
         <div className="max-w-7xl mx-auto relative">
-
           {/* ABSOLUTE IMAGE - NOW RESPONSIVE */}
-          <div className="absolute -top-10 sm:-top-16 md:-top-16 
-          -left-20 flex justify-center h-full">
+          <div
+            className="absolute -top-10 sm:-top-16 md:-top-16 
+          -left-20 flex justify-center h-full"
+          >
             <img
               src="/phone.png"
               alt="Phone"
@@ -35,10 +87,12 @@ export default function contact() {
           </div>
 
           {/* HEADING */}
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 
-             leading-snug text-center max-w-2xl mx-auto ">
-            Whether You're An Individual, Family Member, Or Organisation —
-            We're Just A Message Away
+          <h2
+            className="text-2xl md:text-3xl font-semibold text-gray-900 
+             leading-snug text-center max-w-2xl mx-auto "
+          >
+            Whether You're An Individual, Family Member, Or Organisation — We're
+            Just A Message Away
           </h2>
 
           {/* FORM GRID RESPONSIVE FIX */}
@@ -46,16 +100,17 @@ export default function contact() {
             <div></div>
 
             <div className="p-6 sm:p-8 md:p-12 bg-white rounded-2xl shadow-md col-span-2">
-
               {/* HEADING */}
               <p className="text-lg font-semibold mb-6">Get in Touch Today</p>
 
               {/* FORM INPUTS */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
                 <div>
                   <label className="font-medium">Name</label>
                   <input
+                    name="name"
+                    onChange={handleChange}
+                    value={form.name}
                     className="w-full border-b border-gray-300 focus:border-black 
                     bg-transparent pt-2 pb-1 outline-none"
                     placeholder="Enter Your Name"
@@ -65,6 +120,9 @@ export default function contact() {
                 <div>
                   <label className="font-medium">Email</label>
                   <input
+                    name="email"
+                    onChange={handleChange}
+                    value={form.email}
                     className="w-full border-b border-gray-300 focus:border-black 
                     bg-transparent pt-2 pb-1 outline-none"
                     placeholder="Enter Your Email"
@@ -74,6 +132,9 @@ export default function contact() {
                 <div>
                   <label className="font-medium">Phone</label>
                   <input
+                    name="phone"
+                    onChange={handleChange}
+                    value={form.phone}
                     className="w-full border-b border-gray-300 focus:border-black 
                     bg-transparent pt-2 pb-1 outline-none"
                     placeholder="Enter Phone Number"
@@ -82,19 +143,27 @@ export default function contact() {
 
                 <div>
                   <label className="font-medium">Message</label>
-                  <input
+                  <textarea
+                    name="message"
+                    onChange={handleChange}
+                    value={form.message}
                     className="w-full border-b border-gray-300 focus:border-black 
                     bg-transparent pt-2 pb-1 outline-none"
                     placeholder="Tell us how we can help you..."
                   />
                 </div>
-
               </div>
 
               {/* SUBMIT BUTTON */}
-              <button className="mt-6 bg-[#003A11] text-white px-6 py-3 
-              rounded-full flex items-center gap-2 hover:bg-[#3c8c3f] transition">
-                Submit Request <SendHorizontal size={18} />
+              <button
+                onClick={handleSubmit}
+                disabled={loading}
+                className={`mt-6 px-6 py-3 rounded-full flex items-center gap-2 transition
+    ${loading ? "bg-gray-400 cursor-not-allowed" : "bg-[#003A11] hover:bg-[#3c8c3f] text-white"}
+  `}
+              >
+                {loading ? "Sending..." : "Submit Request"}
+                {!loading && <SendHorizontal size={18} />}
               </button>
 
               {/* CONTACT INFO */}
@@ -104,7 +173,6 @@ export default function contact() {
                 </h3>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
                   {/* PHONE */}
                   <div>
                     <div className="flex items-center gap-2 mb-1">
@@ -112,7 +180,9 @@ export default function contact() {
                       <p className="text-[#000000B2] font-medium">Phone</p>
                     </div>
                     <p className="text-black font-semibold">
-                      1300 000 765 <br />
+                      Wish Brar
+                      <br />
+                      0494 382 307 <br />
                       <span className="text-sm text-[#000000B2]">
                         Mon to Fri: 9AM – 8PM
                       </span>
@@ -146,13 +216,10 @@ export default function contact() {
                       </span>
                     </p>
                   </div>
-
                 </div>
               </div>
-
             </div>
           </div>
-
         </div>
       </section>
       <Footer />

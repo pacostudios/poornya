@@ -5,7 +5,7 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Shield, BookOpen, Heart, Brain, Scale, Search } from "lucide-react";
 
-export default function Navbar() {
+export default function about() {
   const content = [
     { title: "Years of experience", value: "12" },
     { title: "Empowered Clients", value: "1000+" },

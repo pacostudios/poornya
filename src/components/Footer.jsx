@@ -202,7 +202,8 @@ bg-bottom-left bg-overflow-hidden"
           <div className="space-y-2 text-xs sm:text-sm text-black text-center sm:text-left">
             <div className="flex items-center font-semibold gap-2 justify-center sm:justify-start">
               <Phone className="w-4 h-4" />
-              <span>1300990205</span>
+              <span>Wish Brar:</span>
+              <span>0494 382 307</span>
             </div>
             <div className="flex items-center font-semibold gap-2 justify-center sm:justify-start">
               <Mail className="w-4 h-4" />

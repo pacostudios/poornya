@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Urbanist } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: {
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         {children}
+        <Toaster position="top-right" />
       </body>
     </html>
   );
