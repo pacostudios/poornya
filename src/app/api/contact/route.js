@@ -20,7 +20,7 @@ export async function POST(req) {
     }
 
     // 🚀 send mail WITHOUT await
-    transporter.sendMail({
+    await transporter.sendMail({
       from: process.env.EMAIL_USER || "info@poornaya.com",
       replyTo: email,
       to: process.env.EMAIL_USER || "info@poornaya.com",
