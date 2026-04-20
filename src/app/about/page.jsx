@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -126,6 +127,15 @@ export default function about() {
           , and more than a decade of clinical experience.
         </p>
 
+        {/* CTA BUTTON */}
+        <div className="flex justify-center">
+          <Link href="/team/wish-brar">
+            <button className="bg-[#98C44B] hover:bg-[#86b539] text-[#003A11] font-bold py-3 px-8 rounded-full shadow-md transition-transform hover:-translate-y-1">
+              Read Full Bio
+            </button>
+          </Link>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-3 text-center gap-10 mb-10">
           {content.map((item) => (
             <div key={item.title} className="flex flex-col gap-1">
@@ -139,79 +149,6 @@ export default function about() {
       </div>
 
       {/* TEAM SECTION */}
-      <section className="w-full py-0 md:py-2 px-6 md:px-16 ">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-          {/* LEFT SIDE */}
-          <div>
-            <h2 className="text-4xl md:text-5xl font-semibold">
-              Meet Our Team
-            </h2>
-            <p className="mt-2 text-gray-700 max-w-sm">
-              Behind Every Milestone Is A Team That Powers The Vision
-            </p>
-
-            <div className="flex gap-4 mt-6 justify-center sm:justify-start">
-              <button
-                onClick={prev}
-                className="w-10 h-10 rounded-md bg-green-900 text-white flex items-center justify-center hover:bg-green-800"
-              >
-                <ChevronLeft size={20} />
-              </button>
-              <button
-                onClick={next}
-                className="w-10 h-10 rounded-md bg-green-900 text-white flex items-center justify-center hover:bg-green-800"
-              >
-                <ChevronRight size={20} />
-              </button>
-            </div>
-          </div>
-
-          {/* RIGHT SIDE — SLIDER AREA */}
-          <div className="w-full">
-            {/* MOBILE → ONLY ONE CARD */}
-            <div className="sm:hidden flex justify-center">
-              {team[current] && (
-                <div className="w-[280px]">
-                  <div className="bg-white rounded-xl shadow-md overflow-hidden">
-                    <img
-                      src={team[current].img}
-                      className="w-full h-56 object-cover"
-                    />
-                    <div className="p-4">
-                      <h3 className="font-semibold">{team[current].name}</h3>
-                      <p className="text-sm text-gray-600">
-                        {team[current].role}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* DESKTOP → TWO CARDS LIKE YOUR DESIGN */}
-            <div className="hidden sm:grid grid-cols-2 gap-8">
-              {[team[current], team[current + 1]].map(
-                (item, idx) =>
-                  item && (
-                    <div
-                      key={idx}
-                      className="bg-white rounded-xl shadow-md overflow-hidden w-full"
-                    >
-                      <img
-                        src={item.img}
-                        className="w-full h-60 object-cover"
-                      />
-                      <div className="p-4">
-                        <h3 className="font-semibold">{item.name}</h3>
-                        <p className="text-sm text-gray-600">{item.role}</p>
-                      </div>
-                    </div>
-                  )
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* TRAINING & QUALIFICATION */}
       <section className="w-full py-2 sm:py-8 px-6 ">
