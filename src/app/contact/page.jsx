@@ -182,7 +182,7 @@ export default function contact() {
                     <p className="text-black font-semibold">
                       Wish Brar
                       <br />
-                      0494 382 307 <br />
+                      0494 382 307, 0432414215 <br />
                       <span className="text-sm text-[#000000B2]">
                         Mon to Fri: 9AM – 8PM
                       </span>

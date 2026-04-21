@@ -95,7 +95,7 @@ export default function WishBrarProfile() {
             <div>
               <p>
                 I’m <span className="font-bold text-[#003A11]">Wish Brar</span>,
-                a Behavior Support Practitioner at Language for Life. My
+                a Behavior Support Practitioner. My
                 professional background encompasses physiotherapy and social work,
                 with education obtained in Australia and New Zealand, though I
                 come from India and can speak Hindi. Over the past 12 years,
